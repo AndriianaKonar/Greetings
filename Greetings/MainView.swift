@@ -12,16 +12,40 @@ struct MainView: View {
     
     @Environment(\.verticalSizeClass) var verticalSizeClass
     
+    var isPortraitIphone: Bool {
+        horizontalSizeClass == .compact && verticalSizeClass == .regular
+    }
+    
+    var isPortraitIpad: Bool {
+        horizontalSizeClass == .regular && verticalSizeClass == .regular
+    }
+    
+    @Binding var langiage : String
+    @Binding var layoutDirectionString : String
+    
     var body: some View {
-        //Portrait mode
-        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
-            GreetingsView()
+        if isPortraitIphone || isPortraitIpad {
+            NavigationStack{
+                GreetingsView()
+                    .toolbar {
+                        ToolbarItem(placement: .topBarTrailing){
+                            LanguageOptionsTapView(langiage: $langiage, layoutDirectionString: $layoutDirectionString)
+                        }
+                    }
+            }
         } else {
-            LandscapeView()
+            NavigationStack{
+                LandscapeView()
+                    .toolbar {
+                        ToolbarItem(placement: .topBarTrailing){
+                            LanguageOptionsTapView(langiage: $langiage, layoutDirectionString: $layoutDirectionString)
+                        }
+                    }
+            }
         }
     }
 }
 
 #Preview {
-    MainView()
+    MainView(langiage: .constant("EN"), layoutDirectionString: .constant(LEFT_TO_RIGHT))
 }

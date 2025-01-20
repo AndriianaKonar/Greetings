@@ -13,6 +13,7 @@ struct GreetingTextView: View {
     
     let subttitles: [LocalizedStringKey] = [ "Exploring iOS Programming" , "Learning how to bake" , "Programming recipes" , "Exploring SwiftUI"]
     
+    var greetingsTip = GreetingsTip()
     var body: some View {
         
             VStack(alignment: .leading , spacing: 0){
@@ -22,6 +23,7 @@ struct GreetingTextView: View {
                 Text(subttile)
                     .font(.headline)
                     .fontWeight(.thin)
+                    .popoverTip(greetingsTip)
             }
             .onTapGesture {
                 subttile = subttitles

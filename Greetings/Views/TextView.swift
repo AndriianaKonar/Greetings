@@ -14,8 +14,25 @@ struct TextView: View {
     
     let colors: [Color] = [.red, .blue, .yellow, .green , .orange , .purple , Color(red: 0.5, green: 0, blue: 0.5), Color(red: 0, green: 0.5, blue: 0.5), Color(red: 139/255, green: 207/255, blue: 240/255), Color(red: 1, green: 215/255, blue: 0)]
     
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+    
+    var isPortraitIphone: Bool {
+        horizontalSizeClass == .compact && verticalSizeClass == .regular
+    }
+    
+    var isPortraitIpad: Bool {
+        horizontalSizeClass == .regular && verticalSizeClass == .regular
+    }
+    
+    var font : Font {
+        isPortraitIpad ? .largeTitle : .body
+    }
+    
     var body: some View {
         Text(text)
+            .font(font)
             .fontWeight(.semibold)
             .padding(.all)
             .foregroundStyle(Color.white)

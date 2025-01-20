@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Arabic" : {
+
+    },
     "Are you ready to , " : {
       "localizations" : {
         "ar" : {
@@ -57,6 +60,12 @@
         }
       }
     },
+    "Click on text and disc" : {
+
+    },
+    "English" : {
+
+    },
     "Error" : {
       "localizations" : {
         "ar" : {
@@ -112,7 +121,8 @@
             "value" : "Preskúmajte programovanie IOS"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "Exploring iOS Programming" : {
       "localizations" : {
@@ -198,6 +208,9 @@
         }
       }
     },
+    "Hebrew" : {
+
+    },
     "Hello there !" : {
       "localizations" : {
         "ar" : {
@@ -282,6 +295,9 @@
         }
       }
     },
+    "Spanish" : {
+
+    },
     "start expoliring ?" : {
       "localizations" : {
         "ar" : {
@@ -309,6 +325,9 @@
           }
         }
       }
+    },
+    "text will be a randomly generated greeting" : {
+
     },
     "Welcome to SWIFT Programing" : {
       "localizations" : {
