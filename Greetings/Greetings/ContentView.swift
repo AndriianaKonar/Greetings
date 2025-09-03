@@ -7,45 +7,30 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    
+    let messages: [DataItemModel] = [
+                .init(text: "Hello, there!" , color: .red),
+                .init(text: "Welcome to SWIFT" , color: .orange),
+                .init(text: "Are you ready to," , color: .yellow),
+                .init(text: "start expolirng ?" , color: .green),
+                .init(text: "Meow" , color: .blue)
+    ]
+    
     var body: some View {
         VStack(alignment: .leading) {
             
-            Text("Hello, there!")
-                .fontWeight(.semibold)
-                .padding()
-                .background(Color.green.opacity(0.4))
-                .cornerRadius(20)
-                .shadow(color: .green, radius: 5, x: 10, y: 10)
+            BubbleView(text: messages[0].text , color: messages[0].color)
             
-            Text("Welcome to SWIFT")
-                .fontWeight(.semibold)
-                .padding()
-                .background(Color.orange.opacity(0.4))
-                .cornerRadius(20)
-                .shadow(color: .orange,radius: 5, x: 10, y: 10)
+            BubbleView(text: messages[1].text , color: messages[1].color)
             
-            Text("Are you ready to,")
-                .fontWeight(.semibold)
-                .padding()
-                .background(Color.blue.opacity(0.4))
-                .cornerRadius(20)
-                .shadow(color: .blue, radius: 5, x: 10, y: 10)
+            BubbleView(text: messages[2].text , color: messages[2].color)
             
-            Text("start expolirng ?")
-                .fontWeight(.semibold)
-                .padding()
-                .background(Color.red.opacity(0.4))
-                .cornerRadius(20)
-                .shadow(color: .red, radius: 5, x: 10, y: 10)
+            BubbleView(text: messages[3].text , color: messages[3].color)
             
-            Text("Meow")
-                .fontWeight(.semibold)
-                .padding()
-                .background(Color.yellow.opacity(0.4))
-                .cornerRadius(20)
-                .shadow(color: .yellow, radius: 5, x: 10, y: 10)
-                
+            BubbleView(text: messages[4].text , color: messages[4].color)
+        
         }
         .padding()
         
