@@ -10,27 +10,31 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let messages: [DataItemModel] = [
-                .init(text: "Hello, there!" , color: .red),
-                .init(text: "Welcome to SWIFT" , color: .orange),
-                .init(text: "Are you ready to," , color: .yellow),
-                .init(text: "start expolirng ?" , color: .green),
-                .init(text: "Meow" , color: .blue)
-    ]
-    
     var body: some View {
-        VStack(alignment: .leading) {
+        ZStack {
             
-            ForEach(messages) { dataItem in
-                BubbleView(text: dataItem.text , color: dataItem.color)
+            LinearGradient(gradient: Gradient(colors: [.cyan, .blue]), startPoint: .top, endPoint: .bottom)
+                .opacity(0.7)
+                .ignoresSafeArea()
+            
+            
+            VStack(alignment: .leading) {
+                
+                TittleView()
+                
+                Spacer()
+                
+                MessagesView()
+                
+                Spacer()
+                
+                Spacer()
+                
             }
-        
+            .padding()
         }
-        .padding()
            
-//            LinearGradient(gradient: Gradient(colors: [.cyan, .blue]), startPoint: .top, endPoint: .bottom)
-//                .opacity(0.7)
-//                .ignoresSafeArea()
+
 
     }
 }
