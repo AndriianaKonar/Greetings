@@ -19,8 +19,10 @@ struct MessagesView: View {
     ]
     
     var body: some View {
-        ForEach(messages) { dataItem in
-            BubbleView(text: dataItem.text , color: dataItem.color)
+        VStack(alignment: .leading){
+            ForEach(messages) { dataItem in
+                BubbleView(text: dataItem.text , color: dataItem.color)
+            }
         }
     }
 }

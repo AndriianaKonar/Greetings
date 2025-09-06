@@ -13,8 +13,8 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             
-            LinearGradient(gradient: Gradient(colors: [.cyan, .blue]), startPoint: .top, endPoint: .bottom)
-                .opacity(0.7)
+            LinearGradient(gradient: Gradient(colors: [.cyan, .purple]), startPoint: .top, endPoint: .bottom)
+                .opacity(0.5)
                 .ignoresSafeArea()
             
             
