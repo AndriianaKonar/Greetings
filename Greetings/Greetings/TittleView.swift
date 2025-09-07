@@ -11,7 +11,9 @@ struct TittleView: View {
     
     let lineWidth = 15
     let diameter = 70.0
+    let subtitles = ["Discover new horizons" , "Energy that inspires", "Unleash your creativity"]
     
+    @State private var subtitle = "Explore IOS programming world"
     @State private var isRotated: Bool = false
     
     var angle: Angle {
@@ -22,6 +24,7 @@ struct TittleView: View {
         AngularGradient(colors: [.red, .orange, .yellow, .green, .blue, .purple, .pink], center: .center, angle: .zero)
     }
     
+    
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
@@ -29,9 +32,12 @@ struct TittleView: View {
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                 
-                Text("Explore IOS world")
+                Text(subtitle)
                     .font(.headline)
                     .fontWeight(.thin)
+            }
+            .onTapGesture {
+                subtitle = subtitles.randomElement()!
             }
             
             Spacer()
@@ -50,6 +56,10 @@ struct TittleView: View {
 }
 
 #Preview {
-    TittleView()
-        .padding()
+    VStack {
+        TittleView()
+            .padding()
+        
+        Spacer()
+    }
 }
