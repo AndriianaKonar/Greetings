@@ -23,7 +23,7 @@ struct MessagesView: View {
                 .init(text: "Welcome to SWIFT programming" , color: .myOrange),
                 .init(text: "Are you ready to," , color:
                         .myYellow),
-                .init(text: "start expolirng ?" , color: .myGreen),
+                .init(text: "start exploring ?" , color: .myGreen),
                 .init(text: "Meow" , color: .myBlue)
     ]
     
