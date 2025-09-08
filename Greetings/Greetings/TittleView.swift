@@ -19,9 +19,9 @@ struct TittleView: View {
     
     let lineWidth = 15
     let diameter = 70.0
-    let subtitles = ["Discover new horizons" , "Energy that inspires", "Unleash your creativity"]
+    let subtitles: [LocalizedStringKey] = ["Discover new horizons" , "Energy that inspires", "Unleash your creativity"]
     
-    @State private var subtitle = "Explore IOS programming world"
+    @State private var subtitle: LocalizedStringKey = "Explore IOS programming world"
     @State private var isRotated: Bool = false
     
     var angle: Angle {
@@ -45,7 +45,7 @@ struct TittleView: View {
                     .fontWeight(.thin)
             }
             .onTapGesture {
-                subtitle = subtitles.randomElement()!
+                subtitle = subtitles.randomElement() ?? LocalizedStringKey("Explore IOS programming world")
             }
             
             Spacer()

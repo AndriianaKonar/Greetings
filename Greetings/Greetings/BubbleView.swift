@@ -23,7 +23,7 @@ import SwiftUI
 ///  - Tap the bubble to animate and switch to a random color.
 struct BubbleView: View {
     
-    let text: String
+    let text: LocalizedStringKey
     @State var color : Color
     
     let colors: [Color] = [
