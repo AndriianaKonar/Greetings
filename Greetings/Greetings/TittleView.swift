@@ -17,7 +17,7 @@ struct TittleView: View {
     @State private var isRotated: Bool = false
     
     var angle: Angle {
-        isRotated ? .zero : Angle(degrees:180)
+        isRotated ? .zero : Angle(degrees:360)
     }
     
     var angularGradient: AngularGradient {
