@@ -11,11 +11,12 @@ struct MessagesView: View {
     
     
     let messages: [DataItemModel] = [
-                .init(text: "Hello, there!" , color: .red),
-                .init(text: "Welcome to SWIFT programming" , color: .orange),
-                .init(text: "Are you ready to," , color: .yellow),
-                .init(text: "start expolirng ?" , color: .green),
-                .init(text: "Meow" , color: .blue)
+        .init(text: "Hello, there!" , color: .myRed),
+                .init(text: "Welcome to SWIFT programming" , color: .myOrange),
+                .init(text: "Are you ready to," , color:
+                        .myYellow),
+                .init(text: "start expolirng ?" , color: .myGreen),
+                .init(text: "Meow" , color: .myBlue)
     ]
     
     var body: some View {

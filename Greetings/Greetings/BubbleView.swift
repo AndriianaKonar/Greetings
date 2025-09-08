@@ -13,20 +13,14 @@ struct BubbleView: View {
     @State var color : Color
     
     let colors: [Color] = [
-        .blue,
-        .green,
-        .yellow,
-        .red,
-        .orange,
-        .purple,
-        .pink,
-        .teal,
-        .mint,
-        .indigo,
-        .brown,
-        .cyan,
-        .gray,
-        .white
+        .myBlue,
+        .myGreen,
+        .myRed,
+        .myYellow,
+        .myOrange,
+        .myPurple,
+        .myPink,
+        .myCyan,
     ]
 
     
@@ -34,10 +28,11 @@ struct BubbleView: View {
 
         Text(text)
             .fontWeight(.semibold)
+            .foregroundStyle(.black)
             .padding()
-            .background(color.opacity(0.7))
+            .background(color.opacity(0.9))
             .cornerRadius(20)
-            .shadow(color: color, radius: 5, x: 10, y: 10)
+            .shadow(color: color, radius: 10, x: 5, y: 5)
             .onTapGesture {
                 withAnimation {
                     color = colors.randomElement()! //or color = colors.randomElement() ?? default some color

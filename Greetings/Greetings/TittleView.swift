@@ -21,7 +21,7 @@ struct TittleView: View {
     }
     
     var angularGradient: AngularGradient {
-        AngularGradient(colors: [.red, .orange, .yellow, .green, .blue, .purple, .pink], center: .center, angle: .zero)
+        AngularGradient(colors: [.myRed, .myOrange, .myYellow, .myGreen, .myBlue, .myPurple, .myPink], center: .center, angle: .zero)
     }
     
     
