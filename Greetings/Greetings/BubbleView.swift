@@ -4,6 +4,22 @@
 //
 //  Created by Andriiana Konar on 03/09/2025.
 //
+//  BubbleView
+//  -----------
+//  A reusable SwiftUI view that displays a text "bubble" with dynamic styling.
+//
+//  Features:
+//  - Shows customizable text inside a rounded, shadowed background.
+//  - Background color can be initialized and changes randomly on tap with animation.
+//  - Uses a predefined set of custom colors (`myBlue`, `myGreen`, etc.).
+//
+//  Example:
+//  BubbleView(text: "Hello World", color: .green)
+//
+//  Interaction:
+//  - Tap the bubble to animate and switch to a random color.
+//
+
 
 import SwiftUI
 

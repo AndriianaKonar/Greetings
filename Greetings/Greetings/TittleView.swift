@@ -4,6 +4,16 @@
 //
 //  Created by Andriiana Konar on 03/09/2025.
 //
+//  TittleView
+//  -----------
+//  A SwiftUI view that displays an app title with dynamic subtitle and an animated circle.
+//
+//  Features:
+//  - Title "Greetings" with a tappable subtitle that changes randomly.
+//  - Decorative circular ring with angular gradient.
+//  - Ring animates rotation when tapped.
+//
+
 
 import SwiftUI
 

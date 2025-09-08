@@ -4,6 +4,17 @@
 //
 //  Created by Andriiana Konar on 03/09/2025.
 //
+//  MessagesView
+//  -------------
+//  A SwiftUI container that displays a vertical list of BubbleView items.
+//
+//  Features:
+//  - Uses `DataItemModel` to define text and color for each bubble.
+//  - Predefined sample messages for demonstration.
+//  - Aligns bubbles in a VStack, leading-aligned.
+//
+
+
 
 import SwiftUI
 
