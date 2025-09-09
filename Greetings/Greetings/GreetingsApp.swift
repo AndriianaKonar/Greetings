@@ -12,9 +12,13 @@ import SwiftUI
 
 @main
 struct GreetingsApp: App {
+    
+    @State private var language: String = "EN"
+    @State private var layoutDirecton: String = Left_to_Right
+    
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MainView(selectedLanguage: $language, layoutDirecton: $layoutDirecton)
         }
     }
 }

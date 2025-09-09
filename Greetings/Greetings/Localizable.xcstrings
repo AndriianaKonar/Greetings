@@ -85,6 +85,9 @@
         }
       }
     },
+    "English" : {
+
+    },
     "Explore IOS programming world" : {
       "localizations" : {
         "de" : {
@@ -112,6 +115,9 @@
           }
         }
       }
+    },
+    "German" : {
+
     },
     "Greetings" : {
       "localizations" : {
@@ -141,6 +147,9 @@
         }
       }
     },
+    "Hebrew" : {
+
+    },
     "Hello, there!" : {
       "localizations" : {
         "de" : {
@@ -169,6 +178,9 @@
         }
       }
     },
+    "Italian" : {
+
+    },
     "Meow" : {
       "localizations" : {
         "de" : {
@@ -196,6 +208,9 @@
           }
         }
       }
+    },
+    "Slovak" : {
+
     },
     "start exploring ?" : {
       "localizations" : {
