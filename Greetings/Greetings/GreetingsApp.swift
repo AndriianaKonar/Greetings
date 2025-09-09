@@ -7,11 +7,14 @@
 
 import SwiftUI
 
+//Portrait = Compact width, regular height
+
+
 @main
 struct GreetingsApp: App {
     var body: some Scene {
         WindowGroup {
-            GreetingsView()
+            MainView()
         }
     }
 }
