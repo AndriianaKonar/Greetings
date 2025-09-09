@@ -7,5 +7,5 @@
 
 import Foundation
 
-let Left_to_Right = "LTR"
-let Right_to_Left = "RTL"
+let Left_to_Right = "leftToRight"
+let Right_to_Left = "rightToLeft"

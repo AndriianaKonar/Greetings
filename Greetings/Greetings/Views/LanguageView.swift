@@ -10,30 +10,30 @@ import SwiftUI
 struct LanguageView: View {
     
     @Binding var selectedLanguage: String
-    @Binding var layoutDirecton: String
+    @Binding var layoutDirectonString: String
     
     var body: some View {
         Image(systemName: "translate")
             .contextMenu{
                 Button("English") {
-                    selectedLanguage = "EN"
-                    layoutDirecton = "Left_to_Right"
+                    selectedLanguage = "en"
+                    layoutDirectonString = Left_to_Right
                 }
                 Button("German") {
-                    selectedLanguage = "DE"
-                    layoutDirecton = "Left_to_Right"
+                    selectedLanguage = "de"
+                    layoutDirectonString = Left_to_Right
                 }
                 Button("Hebrew") {
-                    selectedLanguage = "HB"
-                    layoutDirecton = "Right_to_Left"
+                    selectedLanguage = "he"
+                    layoutDirectonString = Right_to_Left
                 }
                 Button("Italian") {
-                    selectedLanguage = "IT"
-                    layoutDirecton = "Left_to_Right"
+                    selectedLanguage = "it"
+                    layoutDirectonString = Left_to_Right
                 }
                 Button("Slovak") {
-                    selectedLanguage = "SK"
-                    layoutDirecton = "Left_to_Right"
+                    selectedLanguage = "sk"
+                    layoutDirectonString = Left_to_Right
                 }
 
                 
@@ -42,5 +42,5 @@ struct LanguageView: View {
 }
 
 #Preview {
-    LanguageView(selectedLanguage: .constant("EN"), layoutDirecton: .constant(Left_to_Right))
+    LanguageView(selectedLanguage: .constant("en"), layoutDirectonString: .constant(Left_to_Right))
 }

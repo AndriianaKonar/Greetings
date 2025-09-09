@@ -28,28 +28,29 @@ struct MainView: View {
     
     var body: some View {
         if isPotraitPhone || isIpad {
-            NavigationStack{
+            NavigationStack {
                 GreetingsView()
-                    .toolbar{
-                        ToolbarItem(placement: .topBarTrailing){
-                            LanguageView(selectedLanguage: $selectedLanguage, layoutDirecton: $layoutDirecton)
+                    .toolbar {
+                        ToolbarItem(placement: .topBarTrailing) {
+                            LanguageView(selectedLanguage: $selectedLanguage, layoutDirectonString: $layoutDirecton)
+
                         }
                     }
             }
         } else {
-            NavigationStack{
+            NavigationStack {
                 LandscapeGreetingsView()
-                    .toolbar{
-                        ToolbarItem(placement: .topBarTrailing){
-                            LanguageView(selectedLanguage: $selectedLanguage, layoutDirecton: $layoutDirecton)
+                    .toolbar {
+                        ToolbarItem(placement: .topBarTrailing) {
+                            LanguageView(selectedLanguage: $selectedLanguage, layoutDirectonString: $layoutDirecton)
+
                         }
                     }
             }
         }
-        
     }
 }
 
 #Preview {
-    MainView(selectedLanguage: .constant("EN"), layoutDirecton: .constant(Left_to_Right))
+    MainView(selectedLanguage: .constant("en"), layoutDirecton: .constant(Left_to_Right))
 }
