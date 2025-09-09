@@ -36,11 +36,27 @@ struct BubbleView: View {
         .myPink,
         .myCyan,
     ]
+    
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+    
+    var isPotraitPhone: Bool {
+        horizontalSizeClass == .compact && verticalSizeClass == .regular
+    }
+    
+    var isIpad: Bool {
+        horizontalSizeClass == .regular && verticalSizeClass == .regular
+    }
+    
+    var font: Font {
+        isIpad ? .largeTitle : .body
+    }
 
     
     var body: some View {
 
         Text(text)
+            .font(font)
             .fontWeight(.semibold)
             .foregroundStyle(.black)
             .padding()
