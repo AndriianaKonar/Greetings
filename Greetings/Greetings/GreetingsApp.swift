@@ -13,20 +13,9 @@ import SwiftUI
 @main
 struct GreetingsApp: App {
     
-    @State private var selectedLanguage: String = "en"
-    @State private var languageDirectionString: String = Left_to_Right
-    
-    var layoutDirection: LayoutDirection {
-        languageDirectionString == Left_to_Right ? .leftToRight : .rightToLeft
-    }
-    
     var body: some Scene {
         WindowGroup {
-            MainView(
-                selectedLanguage: $selectedLanguage,
-                layoutDirecton: $languageDirectionString)
+            MainView()
         }
-        .environment(\.locale,Locale(identifier: selectedLanguage))
-        .environment(\.layoutDirection, layoutDirection)
     }
 }
