@@ -29,6 +29,9 @@
         }
       }
     },
+    "Click on" : {
+
+    },
     "Discover new horizons" : {
       "localizations" : {
         "de" : {
@@ -364,6 +367,9 @@
           }
         }
       }
+    },
+    "Text will be randomly generated" : {
+
     },
     "Unleash your creativity" : {
       "localizations" : {

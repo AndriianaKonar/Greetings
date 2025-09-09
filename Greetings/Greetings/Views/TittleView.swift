@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import TipKit
 
 /// TittleView
 ///  -----------
@@ -19,10 +20,13 @@ struct TittleView: View {
     
     @State private var subtitle: LocalizedStringKey = "Explore IOS programming world"
     
+    private var greetingsTip = GreetingsTip()
+        
     
     var body: some View {
         HStack {
             GreetingsTittleView(subtitle: $subtitle)
+                .popoverTip(greetingsTip)
             
             Spacer()
             

@@ -11,7 +11,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		002605EA2E687E7700E381FA /* Greetings */ = {
+		001D6EDF2E70BD540022097E /* Greetings */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Greetings;
 			sourceTree = "<group>";
@@ -32,7 +32,7 @@
 		002605DF2E687E7700E381FA = {
 			isa = PBXGroup;
 			children = (
-				002605EA2E687E7700E381FA /* Greetings */,
+				001D6EDF2E70BD540022097E /* Greetings */,
 				002605E92E687E7700E381FA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,7 +61,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				002605EA2E687E7700E381FA /* Greetings */,
+				001D6EDF2E70BD540022097E /* Greetings */,
 			);
 			name = Greetings;
 			packageProductDependencies = (
