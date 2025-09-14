@@ -49,7 +49,11 @@ struct BubbleView: View {
     }
     
     var font: Font {
+        #if os(macOS)
+        .title
+        #elseif os(IOS)
         isIpad ? .largeTitle : .body
+        #endif
     }
 
     

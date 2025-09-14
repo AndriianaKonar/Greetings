@@ -17,11 +17,16 @@ struct GreetingsTittleView: View {
         VStack(alignment: .leading) {
             Text("Greetings")
                 .font(.largeTitle)
-                .fontWeight(.semibold)
-            
+                .bold()
+            #if os(macOS)
+            Text(subtitle)
+                .font(.largeTitle)
+                .fontWeight(.regular)
+            #elseif os(iOS)
             Text(subtitle)
                 .font(.headline)
                 .fontWeight(.thin)
+            #endif
         }
         .onTapGesture {
             subtitle = subtitles.randomElement() ?? LocalizedStringKey("Explore IOS programming world")
